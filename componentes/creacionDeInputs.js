@@ -1,4 +1,4 @@
 const tareaInput = document.createElement("input");
-tareaInput.placeholder = "Ingresa tu nombre";
+tareaInput.type = "time";
 
 export default tareaInput;

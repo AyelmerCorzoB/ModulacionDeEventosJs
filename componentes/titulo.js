@@ -1,5 +1,7 @@
 const titulo = document.createElement("h1");
 titulo.textContent = "Tareas";
 
+const subtitulo = document.createElement("h2");
+subtitulo.textContent = "Tareas por hacer";
 
-export default titulo;
+export { titulo, subtitulo };
