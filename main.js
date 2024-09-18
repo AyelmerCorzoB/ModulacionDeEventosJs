@@ -1,10 +1,10 @@
-import { subtitulo, titulo } from "./componentes/titulo.js";
-
+import { headerContent, subtitulo } from "./componentes/titulo.js";
 import ContenedorTareas from "./componentes/contenedorTareas.js";
 import crearTareaContenedor from "./componentes/crearTareaContenedor.js";
-import root from "./componentes/llamadaHtml.js";
-
-root.append(titulo);
+import root from "./componentes/llamadaAlHtml.js";
+import SectionButtonEliminar from "./componentes/botonEliminarTodo.js";
+root.append(headerContent);
 root.append(crearTareaContenedor);
-root.append(subtitulo)
+root.append(subtitulo);
+root.append(SectionButtonEliminar);
 root.append(ContenedorTareas);

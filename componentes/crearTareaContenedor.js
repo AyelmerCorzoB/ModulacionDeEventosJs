@@ -5,7 +5,9 @@ import { agregarTarea } from "../funciones/funcionesTareas.js";
 
 const crearTareaContenedor = document.createElement("div");
 crearTareaContenedor.id = "ContenedorInputs"
+
 botonEnviar.addEventListener("click", () => agregarTarea(tareaInput));
+
 
 crearTareaContenedor.append(tareaInput);
 crearTareaContenedor.append(opciones);

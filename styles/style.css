@@ -7,16 +7,26 @@ body {
     align-items: center;
     justify-content: center;
     font-family:Arial, Helvetica, sans-serif;
+    background-color: #9ef0e2;
+}
+
+#root {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: 100vh;
 }
 h1 {
     text-align: center;
 }
 #ContenedorInputs {
-    background-color: antiquewhite;
+    background-color: #9ef0e2;
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 150px;
+    height: 200px;
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
@@ -42,25 +52,85 @@ h1 {
 }
 
 #ContenedorTareas {
+    background-color: #9ef0e2;
+    width: 90%;
     margin-top: 2vh;
-    background-color: cadetblue;
-    width: 300px;
-    height: 400px;
+
+    height: 52vh;
     overflow: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    padding: 2vw;
+    border: 0px solid;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px black;
+    
+}
+#ContenedorTareas::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;  
 }
 
 #ContenedorTareas p {
     text-align: center;
 }
 
-#ContenedorTareas button {
+#ContenedorTareas #tarjetaTarea #botonEliminar {
     width: 80px;
     height: 24px;
-    background-color: brown;
+    background-color: rgb(206, 18, 18);
     color: aliceblue;
     border: 0px solid;
     border-radius: 8px;
+    
+}
+#ContenedorTareas #tarjetaTarea #botonActualizar {
+    width: 80px;
+    height: 24px;
+    background-color: rgb(18, 206, 27);
+    color: aliceblue;
+    border: 0px solid;
+    border-radius: 8px;
+    margin-right: 2vw;
+}
+#ContenedorTareas #tarjetaTarea #botonActualizar:hover {
+    background-color: rgb(31, 88, 34);
+    cursor: pointer;
+}
+
+#ContenedorTareas #tarjetaTarea #botonEliminar:hover {
+    background-color: rgb(223, 85, 85);
+    cursor: pointer;
+}
+#sectionButtonEliminar {
+    display: flex;
+    align-items: center;
+    display: flex;
+    
+
+}
+
+#tarjetaTarea {
+    background-color: #1a998c;
+    height: 80px;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 2vw;
+}
+
+#tarjetaTarea p {
+    text-overflow: ellipsis;
+}
+#sectionButtonEliminar button {
+    background-color: brown;
+    color: aliceblue;
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+#sectionButtonEliminar button:hover {
+    background-color: rgb(211, 49, 49);
+    cursor:pointer;
+    box-shadow: 0px 0px 5px black;
 }

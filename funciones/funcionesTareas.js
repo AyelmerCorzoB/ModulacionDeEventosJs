@@ -1,37 +1,44 @@
 import ContenedorTareas from "../componentes/contenedorTareas.js";
 import opciones from "../componentes/opciones.js";
+import EliminarAll from "../componentes/botonEliminarTodo.js"
 
 function agregarTarea(input) {
+    const TarjetaTarea = document.createElement("div");
+    TarjetaTarea.id = "tarjetaTarea"
     const hora = input.value;
+    
     if (hora === "") {
-        alert("La tarea no puede estar vacía.");
+        ContenedorTareas.innerHTML = `<p> No puede quedar vacio </p>`;
         return;
     }
 
     const opcionElegida = opciones.options[opciones.selectedIndex].text;
 
     const parrafoTarea = document.createElement("p");
-    parrafoTarea.textContent = `${hora} ${opcionElegida}`;
+    parrafoTarea.innerHTML = `<p><strong>${hora}</strong> ${opcionElegida}</p>`;
     
+    const botonActualizar = document.createElement("button");
+    botonActualizar.textContent = "Actualizar";
+    botonActualizar.id = "botonActualizar"
+
     const botonEliminar = document.createElement("button");
     botonEliminar.textContent = "Eliminar";
-    botonEliminar.addEventListener("click", () => eliminarTarea(parrafoTarea, botonEliminar));
-    
+    botonEliminar.id = "botonEliminar"
+    botonEliminar.addEventListener("click", () => eliminarTarea(TarjetaTarea));
 
-    ContenedorTareas.append(parrafoTarea, botonEliminar);
+    EliminarAll.addEventListener("click", () => eliminarTodo(TarjetaTarea))
     
-    contadorTareas++;
+    TarjetaTarea.append(parrafoTarea, botonActualizar,botonEliminar)
+    ContenedorTareas.append( TarjetaTarea);
+}
+
+function eliminarTarea(tarjeta) {
+    tarjeta.remove();
 }
 
 
-
-
-function eliminarTarea(tarea, boton) {
-    tarea.remove();
+function eliminarTodo (boton){
     boton.remove();
-    this.remove();
-    contadorTareas--;
-
 }
 
-export {agregarTarea, eliminarTarea};
+export {agregarTarea, eliminarTarea, eliminarTodo };
