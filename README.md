@@ -35,6 +35,8 @@ Este es un proyecto simple pero poderoso que te permite gestionar tus tareas dia
 5. Puedes eliminar la tarea con el botón **"Eliminar"** o borrar todas las tareas con **"Eliminar Todo"**.
 
 ---
+## Capturas
+![image](https://github.com/user-attachments/assets/1368108f-7683-47fe-828d-3c3f5a9d72bb)
 
 ## 📂 Estructura del Proyecto
 
